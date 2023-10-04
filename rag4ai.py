@@ -1,7 +1,4 @@
 import openai
-#import numpy
-#import pandas as pd
-#import time
 import os
 
 from cassandra.cluster import Cluster

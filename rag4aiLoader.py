@@ -3,14 +3,13 @@ import numpy
 import pandas as pd
 import time
 import os
-from getpass import getpass
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 from cassandra.query import SimpleStatement
 from datasets import load_dataset
 
-ASTRA_DB_TOKEN_BASED_PASSWORD = getpass('Your Astra DB Token ("AstraCS:..."): ')
-openai_api_key = getpass('Enter your OpenAI API key: ')
+ASTRA_DB_TOKEN_BASED_PASSWORD = os.environ['ASTRA_DB_APPLICATION_TOKEN']
+openai_api_key = os.environ['OPENAI_API_KEY']
 my_ks = input('Your Astra Keyspace name: ')
 openai.api_key = openai_api_key
 cass_user = 'token'
