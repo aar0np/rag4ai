@@ -6,7 +6,6 @@ import os
 from getpass import getpass
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
-from cassandra.query import dict_factory
 from cassandra.query import SimpleStatement
 from datasets import load_dataset
 
